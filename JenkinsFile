@@ -1,0 +1,11 @@
+node {
+	stage ('SCM checkout'){
+		git "https://github.com/shrubom/ModularBankPaymentsAPITest.git"
+		}
+	stage ('Build'){
+    	dir("ModularBank") {
+	   sh "mvn clean install"
+       }
+      
+		}
+}
