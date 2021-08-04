@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+
+<suite thread-count="2" verbose="10"
+	name="Modular Bank Payments Test Suite" parallel="tests">
+	<test verbose="2" name="paymentsAPI" >
+		<classes>
+			<class
+				name="com.modularbank.payments.api.invoker.PaymentsPostTestCases" />
+			<class
+				name="com.modularbank.payments.api.invoker.PaymentsGetTestCases" />
+		</classes>
+
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
