@@ -91,7 +91,7 @@ public class BaseClass {
 		custReq.setGivenName(prop.getProperty("givenName") + alphaStringGen.randomAlphaGen());
 		custReq.setSurname(prop.getProperty("surName"));
 		custReq.setMiddleName(prop.getProperty("middleName"));
-		custReq.setBirthDate("1990-12-01");
+		custReq.setBirthDate(prop.getProperty("dateofbirth"));
 		custReq.setPersonTypeCode("P");
 		custReq.setSex("F");
 		custReq.setEmail("and.mandi@gmail.com");
