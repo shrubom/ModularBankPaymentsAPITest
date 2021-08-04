@@ -59,7 +59,6 @@ public class BaseClass {
 		RequestSpecification request = RestAssured.given();
 		request.spec(postReqSpec);
 		JWTTokenRequest jtr = new JWTTokenRequest();
-		//jtr.setUserName("modular.system");
 		jtr.setUserName(prop.getProperty("userName"));
 		jtr.setPassword(prop.getProperty("password"));
 		response = request.body(jtr).when().post("api/v1/employees/authorise");

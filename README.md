@@ -1,20 +1,31 @@
 # Modular Bank Payments API Test
 **Postman Collection is placed in the resource folder** 
-## Test Strategy
 
-1. Perform Manual testing using postman 
-2. Create maven project and set up **TestNG** automation framework .
+## Automation Testing Strategy:
+
+1. Identify the feasibility of automation.
+2. Selecting the right tool for automation.
+3. Test Management Strategy
+4. Test Environment Management
+5. Automation Test Script Development and Execution
+6. Test analysis and generation of Test Reports
+
+
+## API Test Strategy
+
+1. Perform Manual testing using postman .
+2. Create maven project and use **TestNG** automation framework .
 3. Define and run test cases .
 
 	
-## Test cases
+## Test Cases
 
-### Testcase 1: Get the JWT authentication
+### TestCase 1: Get the JWT authentication
 
 * Validate the status code is **200**
 * Save the token to be used in all other APIs.
 
-	> code samples for the methods in BaseClass .
+	> code sample for the methods in BaseClass .
 
    ```java
    
@@ -25,7 +36,6 @@
 		RequestSpecification request = RestAssured.given();
 		request.spec(postReqSpec);
 		JWTTokenRequest jtr = new JWTTokenRequest();
-		//jtr.setUserName("modular.system");
 		jtr.setUserName(prop.getProperty("userName"));
 		jtr.setPassword(prop.getProperty("password"));
 		response = request.body(jtr).when().post("api/v1/employees/authorise");
@@ -43,7 +53,8 @@
 	}
    
    ```
-
+    > code samples for the Tests using TestNG .
+    
 	```java
 	
 	@Test(groups = "paymentsAPI", priority = 0)
@@ -53,7 +64,7 @@
 	}
 	```
 	
-### Testcase 2: Create Customer details
+### TestCase 2: Create Customer details
 
 * Implement object.properties file to get the required input for the request body .<br>
 * Validate if the status is 200 .
@@ -74,7 +85,7 @@
 		}
 	```
 	
-### Testcase 3: Create Account for the new customer
+### TestCase 3: Create Account for the new customer
 
 * Use the PersonId received from the previous post API and provide the appropriate request body .
 * Validate that the status is 200 
@@ -97,7 +108,7 @@
 ```
 
 
-### Testcase 4: Create Transactions for the newly created account
+### TestCase 4: Create Transactions for the newly created account
 
 * Use the accountId from the previous service call and provide appropriate request body .
 * Validate if the status is 200 .
@@ -117,7 +128,7 @@
 		}
 	}
 ```
-### Testcase 5: Initialize payment for account
+### TestCase 5: Initialize payment for account
 * Use the accountId from the previous service call and provide appropriate request body .
 * Validate if the status is 200 .
 ```java
@@ -133,7 +144,7 @@
 
 	}
 ```
-### Testcase 6: Confirm payment
+### TestCase 6: Confirm payment
 * Use the accountId from the previous service call and provide appropriate request body .
 * Validate if the status is 200 .
 
@@ -146,7 +157,7 @@
 	}
 ```
 
-### Testcase 7: Get the newly created account details
+### TestCase 7: Get the newly created account details
 
 * Get the account details using the account ID .
 * Validate if the status is 200 .
@@ -160,7 +171,7 @@
 		}
 ```
 
-### Testcase 8: Get the account balance
+### TestCase 8: Get the account balance
 * Get the account balance using the account ID .
 * Validate if the status is 200 .
 
@@ -173,7 +184,7 @@
 		}
 ```
 
-### Testcase 9: Get account statement history
+### TestCase 9: Get account statement history
 * Get the account statement using the account ID .
 * Validate if the status is 200 .
 
