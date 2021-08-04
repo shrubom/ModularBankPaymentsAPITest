@@ -9,7 +9,46 @@
 .stack-trace { display: none;} 
 </style>
 <script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
 
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
 </script>
 
 </head>
@@ -18,9 +57,9 @@
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>9/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 04 12:39:10 CAT 2021</td>
+<td>Started on:</td><td>Thu Aug 05 00:28:33 CAT 2021</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13971 ms)</td>
+<tr><td>Total time:</td><td>13 seconds (13663 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -39,47 +78,47 @@
 <td title='com.modularbank.payments.api.invoker.PaymentsPostTestCases.confirmPayment()'><b>confirmPayment</b><br>Test class: com.modularbank.payments.api.invoker.PaymentsPostTestCases</td>
 <td></td>
 <td>1</td>
-<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@37091312</td></tr>
+<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67</td></tr>
 <tr>
 <td title='com.modularbank.payments.api.invoker.PaymentsGetTestCases.getAccountBalances()'><b>getAccountBalances</b><br>Test class: com.modularbank.payments.api.invoker.PaymentsGetTestCases</td>
 <td></td>
 <td>0</td>
-<td>com.modularbank.payments.api.invoker.PaymentsGetTestCases@3ed242a4</td></tr>
+<td>com.modularbank.payments.api.invoker.PaymentsGetTestCases@614df0a4</td></tr>
 <tr>
 <td title='com.modularbank.payments.api.invoker.PaymentsGetTestCases.getAccountDetails()'><b>getAccountDetails</b><br>Test class: com.modularbank.payments.api.invoker.PaymentsGetTestCases</td>
 <td></td>
 <td>1</td>
-<td>com.modularbank.payments.api.invoker.PaymentsGetTestCases@3ed242a4</td></tr>
+<td>com.modularbank.payments.api.invoker.PaymentsGetTestCases@614df0a4</td></tr>
 <tr>
 <td title='com.modularbank.payments.api.invoker.PaymentsGetTestCases.getAccountStatement()'><b>getAccountStatement</b><br>Test class: com.modularbank.payments.api.invoker.PaymentsGetTestCases</td>
 <td></td>
 <td>0</td>
-<td>com.modularbank.payments.api.invoker.PaymentsGetTestCases@3ed242a4</td></tr>
+<td>com.modularbank.payments.api.invoker.PaymentsGetTestCases@614df0a4</td></tr>
 <tr>
 <td title='com.modularbank.payments.api.invoker.PaymentsPostTestCases.postCreateAccount()'><b>postCreateAccount</b><br>Test class: com.modularbank.payments.api.invoker.PaymentsPostTestCases</td>
 <td></td>
 <td>1</td>
-<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@37091312</td></tr>
+<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67</td></tr>
 <tr>
 <td title='com.modularbank.payments.api.invoker.PaymentsPostTestCases.postCreateCustomer()'><b>postCreateCustomer</b><br>Test class: com.modularbank.payments.api.invoker.PaymentsPostTestCases</td>
 <td></td>
 <td>1</td>
-<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@37091312</td></tr>
+<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67</td></tr>
 <tr>
 <td title='com.modularbank.payments.api.invoker.PaymentsPostTestCases.postJWTRequest()'><b>postJWTRequest</b><br>Test class: com.modularbank.payments.api.invoker.PaymentsPostTestCases</td>
 <td></td>
 <td>3</td>
-<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@37091312</td></tr>
+<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67</td></tr>
 <tr>
 <td title='com.modularbank.payments.api.invoker.PaymentsPostTestCases.postPayment()'><b>postPayment</b><br>Test class: com.modularbank.payments.api.invoker.PaymentsPostTestCases</td>
 <td></td>
 <td>1</td>
-<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@37091312</td></tr>
+<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67</td></tr>
 <tr>
 <td title='com.modularbank.payments.api.invoker.PaymentsPostTestCases.postTransactions()'><b>postTransactions</b><br>Test class: com.modularbank.payments.api.invoker.PaymentsPostTestCases</td>
 <td></td>
 <td>1</td>
-<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@37091312</td></tr>
+<td>com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67</td></tr>
 </table><p>
 </body>
 </html>
