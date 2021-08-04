@@ -1,7 +1,10 @@
 package com.modularbank.payments.api.utils;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Properties;
 import java.util.UUID;
 
 import org.apache.logging.log4j.LogManager;
@@ -29,11 +32,16 @@ import com.modularbank.payments.api.response.body.CreateTransactionResponse;
 import com.modularbank.payments.api.response.body.JWTTokenResponse;
 import com.modularbank.payments.rest.assured.config.RestAssuredConfigurations;
 
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
 public class BaseClass {
+	
+	InputStream input = BaseClass.class.getClassLoader().getResourceAsStream("object.properties");
+	Properties prop = new Properties();
+	
 
 	private static final Logger log = LogManager.getLogger(BaseClass.class);
 	public static String getResponse = null, token = null, data = null;
@@ -44,14 +52,17 @@ public class BaseClass {
 	public static long time = date.getTime();
 	RequestSpecification postReqSpec = new RestAssuredConfigurations().postRequestSpecification();
 
-	public JWTTokenResponse jwtTokenExtract() throws JSONException {
+	public JWTTokenResponse jwtTokenExtract() throws JSONException, IOException {
+		
+		prop.load(input);
 
 		RestAssured.baseURI = Constants.authURL;
 		RequestSpecification request = RestAssured.given();
 		request.spec(postReqSpec);
 		JWTTokenRequest jtr = new JWTTokenRequest();
-		jtr.setUserName("modular.system");
-		jtr.setPassword("pass");
+		//jtr.setUserName("modular.system");
+		jtr.setUserName(prop.getProperty("userName"));
+		jtr.setPassword(prop.getProperty("password"));
 		response = request.body(jtr).when().post("api/v1/employees/authorise");
 		String jsonStringVal = response.asString();
 		JSONObject jsonObj = new JSONObject(jsonStringVal);
@@ -77,9 +88,9 @@ public class BaseClass {
 		RequestSpecification request = RestAssured.given();
 		request.spec(postReqSpec).header(Constants.authToken, tokenValue);
 		CreateCustomerRequest custReq = new CreateCustomerRequest();
-		custReq.setGivenName("AndyB" + alphaStringGen.randomAlphaGen());
-		custReq.setSurname("Mandy");
-		custReq.setMiddleName("Thandi");
+		custReq.setGivenName(prop.getProperty("givenName") + alphaStringGen.randomAlphaGen());
+		custReq.setSurname(prop.getProperty("surName"));
+		custReq.setMiddleName(prop.getProperty("middleName"));
 		custReq.setBirthDate("1990-12-01");
 		custReq.setPersonTypeCode("P");
 		custReq.setSex("F");

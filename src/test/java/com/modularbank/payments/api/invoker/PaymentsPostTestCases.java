@@ -1,5 +1,6 @@
 package com.modularbank.payments.api.invoker;
 
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -46,7 +47,7 @@ public class PaymentsPostTestCases extends BaseClass {
 
 	// get the JWT Token for further use
 	@Test(groups = "paymentsAPI", priority = 0)
-	public void postJWTRequest() throws InterruptedException, JSONException {
+	public void postJWTRequest() throws InterruptedException, JSONException, IOException {
 		log.info("Getting the JWT Token");
 		tokenVal = jwtTokenExtract().getTokenId();
 	}
