@@ -85,7 +85,6 @@ public class PaymentsPostTestCases extends BaseClass {
 	public void postTransactions() throws JSONException {
 		log.info("Create transaction for the account");
 		transRes = createTransactions(tokenVal, personId, accountId);
-		// Need to fix the below code
 		Iterator<CreateTransactionResponse> iterator = transRes.iterator();
 		while (iterator.hasNext()) {
 			CreateTransactionResponse transItem = iterator.next();

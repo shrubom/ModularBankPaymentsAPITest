@@ -55,7 +55,6 @@ public class BaseClass {
 	public JWTTokenResponse jwtTokenExtract() throws JSONException, IOException {
 		
 		prop.load(input);
-
 		RestAssured.baseURI = Constants.authURL;
 		RequestSpecification request = RestAssured.given();
 		request.spec(postReqSpec);
