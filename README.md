@@ -1,5 +1,5 @@
 # Modular Bank Payments API Test
-
+**Postman Collection is placed in the resource folder** 
 ## Test Strategy
 
 1. Perform Manual testing using postman 
@@ -121,7 +121,6 @@
 * Use the accountId from the previous service call and provide appropriate request body .
 * Validate if the status is 200 .
 ```java
-// Initialize Payment for an account
 	@Test(groups = "paymentsAPI", priority = 4)
 	public void postPayment() throws JSONException {
 		log.info("Initialize Payment for an account");
@@ -139,8 +138,6 @@
 * Validate if the status is 200 .
 
 ```java
-
-// Confirm Payment for newly initialized Payment
 	@Test(groups = "paymentsAPI", priority = 5)
 	public void confirmPayment() {
 		log.info("Confirm a Payment for a new Payment");
@@ -156,7 +153,6 @@
 
 
 ```java
-// Get the newly created account Details
 @Test(groups = "paymentsAPI", priority = 0)
 		public void getAccountDetails() throws JSONException {
 			log.info("Printing the newly created account details");

@@ -1,0 +1,394 @@
+{
+	"info": {
+		"_postman_id": "6f683e02-70e6-46e0-825e-901014cbfec3",
+		"name": "MODULAR BANK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "JWT Token Auth",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tenant-code",
+						"value": "SANDBOX",
+						"type": "text"
+					},
+					{
+						"key": "x-channel-code",
+						"value": "SYSTEM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"modular.system\",\r\n    \"password\":\"pass\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://auth-api.sandbox.modularbank.xyz/api/v1/employees/authorise",
+					"protocol": "https",
+					"host": [
+						"auth-api",
+						"sandbox",
+						"modularbank",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"v1",
+						"employees",
+						"authorise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tenant-code",
+						"value": "SANDBOX",
+						"type": "text"
+					},
+					{
+						"key": "x-channel-code",
+						"value": "SYSTEM",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUlkIjoiNCIsInBlcnNvbklkIjpudWxsLCJuYW1lIjoiU3lzdGVtIFN5c3RlbSIsImNzcmZUb2tlbiI6bnVsbCwiZXhwaXJ5RFRpbWUiOiIyMDIxLTA4LTA0VDA3OjU2OjMzIiwicm9sZXMiOltdLCJ0ZW5hbnRDb2RlIjoiTUIifQ.hZp3BGSm8PMGHXRO7M1mowYDu5hRBdTm_hTzEI8Jds4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"givenName\": \"BBAA\",\r\n\"surname\": \"Nayak\",\r\n\"middleName\": \"Alexander\",\r\n\"birthDate\": \"1990-12-01\",\r\n\"personTypeCode\": \"P\",\r\n\"sex\": \"M\",\r\n\"email\": \"psmidt@smidt.de\",\r\n\"phoneNumber\": \"0901820\",\r\n\"phoneCountryCode\": \"+372\",\r\n\"educationCode\": \"HIGHER_EDUCATION\",\r\n\"activityCode\": \"SPECIALIST\",\r\n\"housingTypeCode\": \"PRIVATE\",\r\n\"buildingTypeCode\": \"APARTMENT\",\r\n\"businessAreaCode\": \"LEGAL\",\r\n\"maritalStatusCode\": \"MARRIED\",\r\n\"dependantPersons\": 1,\r\n\"employmentTimeCode\": \"MORE_4_YEAR\",\r\n\"customerType\": \"string\",\r\n\"nationality\": \"DE\",\r\n\"placeOfBirth\": \"Berlin\",\r\n\"countryOfBirth\": \"DE\",\r\n\"language\": \"DE\",\r\n\"taxResidencyCountry\": \"DE\",\r\n\"fixedEmploymentLength\": 6,\r\n\"identificationNumber\": {\r\n\"idNumber\": \"00155556S3\",\r\n\"idCountryCode\": \"DE\",\r\n\"vatNumber\": \"DE1353456789\",\r\n\"taxNumber\": \"12345678902\"\r\n},\r\n\"addresses\": [\r\n{\r\n\"addressTypeCode\": \"R\",\r\n\"street1\": \"Fennstrasse 4\",\r\n\"street2\": \"string\",\r\n\"cityCounty\": \"Berlin\",\r\n\"stateRegion\": \"Berlin\",\r\n\"zip\": \"13347\",\r\n\"countryCode\": \"DE\",\r\n\"moveInDate\": \"2018-06-23\"\r\n}\r\n],\r\n\"document\": {\r\n\"issuingCountry\": \"DE\",\r\n\"number\": \"011155R5M1M5\",\r\n\"documentTypeCode\": \"PASSPORT\",\r\n\"expiryDate\": \"2025-01-03\"\r\n},\r\n\"usResident\": true,\r\n\"pep\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://person-api.sandbox.modularbank.xyz/api/v1/persons",
+					"protocol": "https",
+					"host": [
+						"person-api",
+						"sandbox",
+						"modularbank",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"v1",
+						"persons"
+					]
+				},
+				"description": "Create customer and get the PersonID"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tenant-code",
+						"value": "SANDBOX",
+						"type": "text"
+					},
+					{
+						"key": "x-channel-code",
+						"value": "SYSTEM",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUlkIjoiNCIsInBlcnNvbklkIjpudWxsLCJuYW1lIjoiU3lzdGVtIFN5c3RlbSIsImNzcmZUb2tlbiI6bnVsbCwiZXhwaXJ5RFRpbWUiOiIyMDIxLTA4LTA0VDA3OjU2OjMzIiwicm9sZXMiOltdLCJ0ZW5hbnRDb2RlIjoiTUIifQ.hZp3BGSm8PMGHXRO7M1mowYDu5hRBdTm_hTzEI8Jds4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"accountName\": \"Demo account\",\r\n\"accountTypeCode\": \"CURRENCY\",\r\n\"currencyCode\": \"EUR\",\r\n\"customerGroupCode\": \"GROUP_A\",\r\n\"personId\": \"ID-2924\",\r\n\"personName\":\"BBA\",\r\n\"priceListTypeCode\": \"STANDARD\",\r\n\"residencyCountryCode\": \"FI\",\r\n\"source\": {\r\n\"sourceName\": \"TEST\",\r\n\"sourceRef\": \"{{$guid}}\"\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://account-api.sandbox.modularbank.xyz/api/v1/persons/ID-2969/accounts",
+					"protocol": "https",
+					"host": [
+						"account-api",
+						"sandbox",
+						"modularbank",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"v1",
+						"persons",
+						"ID-2969",
+						"accounts"
+					]
+				},
+				"description": "Create account with the Person ID and get the Account ID for further transaction "
+			},
+			"response": []
+		},
+		{
+			"name": "Get the Account Details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-tenant-code",
+						"value": "SANDBOX",
+						"type": "text"
+					},
+					{
+						"key": "x-channel-code",
+						"value": "SYSTEM",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUlkIjoiNCIsInBlcnNvbklkIjpudWxsLCJuYW1lIjoiU3lzdGVtIFN5c3RlbSIsImNzcmZUb2tlbiI6bnVsbCwiZXhwaXJ5RFRpbWUiOiIyMDIxLTA3LTMwVDE0OjI4OjI3Iiwicm9sZXMiOltdLCJ0ZW5hbnRDb2RlIjoiTUIifQ.HSZosYSXbmY8B496yKN6_xqt9LpaHmeiOB9_Yiffxw0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://account-api.sandbox.modularbank.xyz/api/v1/accounts/ID-2711",
+					"protocol": "https",
+					"host": [
+						"account-api",
+						"sandbox",
+						"modularbank",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"ID-2711"
+					]
+				},
+				"description": "Used for getting the account details. Use the Account ID in the link"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transactions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tenant-code",
+						"value": "SANDBOX",
+						"type": "text"
+					},
+					{
+						"key": "x-channel-code",
+						"value": "SYSTEM",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUlkIjoiNCIsInBlcnNvbklkIjpudWxsLCJuYW1lIjoiU3lzdGVtIFN5c3RlbSIsImNzcmZUb2tlbiI6bnVsbCwiZXhwaXJ5RFRpbWUiOiIyMDIxLTA4LTA0VDA3OjU2OjMzIiwicm9sZXMiOltdLCJ0ZW5hbnRDb2RlIjoiTUIifQ.hZp3BGSm8PMGHXRO7M1mowYDu5hRBdTm_hTzEI8Jds4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"details\": \"Top up Fee\",\r\n\"effectiveDate\": \"2021-06-08\",\r\n\"money\": {\r\n\"amount\": 10000.00,\r\n\"currencyCode\": \"EUR\"\r\n},\r\n\"source\": {\r\n\"sourceName\": \"CARD_TOPUP\",\r\n\"sourceRef\": \"ID-{{$timestamp}}\"\r\n},\r\n\"transactionTypeCode\": \"CARD_TOPUP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://account-api.sandbox.modularbank.xyz/api/v3/accounts/ID-2811/transactions",
+					"protocol": "https",
+					"host": [
+						"account-api",
+						"sandbox",
+						"modularbank",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"v3",
+						"accounts",
+						"ID-2811",
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Account Balances",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-tenant-code",
+						"value": "SANDBOX",
+						"type": "text"
+					},
+					{
+						"key": "x-channel-code",
+						"value": "SYSTEM",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUlkIjoiNCIsInBlcnNvbklkIjpudWxsLCJuYW1lIjoiU3lzdGVtIFN5c3RlbSIsImNzcmZUb2tlbiI6bnVsbCwiZXhwaXJ5RFRpbWUiOiIyMDIxLTA3LTMwVDE0OjI4OjI3Iiwicm9sZXMiOltdLCJ0ZW5hbnRDb2RlIjoiTUIifQ.HSZosYSXbmY8B496yKN6_xqt9LpaHmeiOB9_Yiffxw0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://account-api.sandbox.modularbank.xyz/api/v1/accounts/ID-2711/available-balance?currencyCode=EUR",
+					"protocol": "https",
+					"host": [
+						"account-api",
+						"sandbox",
+						"modularbank",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"ID-2711",
+						"available-balance"
+					],
+					"query": [
+						{
+							"key": "currencyCode",
+							"value": "EUR"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Initialize Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tenant-code",
+						"value": "SANDBOX",
+						"type": "text"
+					},
+					{
+						"key": "x-channel-code",
+						"value": "SYSTEM",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUlkIjoiNCIsInBlcnNvbklkIjpudWxsLCJuYW1lIjoiU3lzdGVtIFN5c3RlbSIsImNzcmZUb2tlbiI6bnVsbCwiZXhwaXJ5RFRpbWUiOiIyMDIxLTA4LTA0VDA3OjU2OjMzIiwicm9sZXMiOltdLCJ0ZW5hbnRDb2RlIjoiTUIifQ.hZp3BGSm8PMGHXRO7M1mowYDu5hRBdTm_hTzEI8Jds4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"counterparty\": {\r\n\"counterpartyTypeCode\": \"IBAN\",\r\n\"name\": \"Ben Ficher\",\r\n\"value\": \"EE459999000000010140\"\r\n},\r\n\"details\": \"Details\",\r\n\"directionCode\": \"OUT\",\r\n\"effectiveDate\": \"2022-11-08\",\r\n\"endToEndId\": \"PROVIDED\",\r\n\"money\": {\r\n\"amount\": 24.35,\r\n\"currencyCode\": \"EUR\"\r\n},\r\n\"paymentTransferTypeCode\": \"INSTANTREGULAR\",\r\n\"paymentTypeCode\": \"ACC2SEPA\",\r\n\"source\": {\r\n\"sourceName\": \"PAYMENT\",\r\n\"sourceRef\": \"ID-{{$timestamp}}\"\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://account-api.sandbox.modularbank.xyz/api/v1/accounts/ID-2811/payments/initialise",
+					"protocol": "https",
+					"host": [
+						"account-api",
+						"sandbox",
+						"modularbank",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"ID-2811",
+						"payments",
+						"initialise"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Confirm Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-tenant-code",
+						"value": "SANDBOX",
+						"type": "text"
+					},
+					{
+						"key": "x-channel-code",
+						"value": "SYSTEM",
+						"type": "text"
+					},
+					{
+						"key": "x-auth-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbXBsb3llZUlkIjoiNCIsInBlcnNvbklkIjpudWxsLCJuYW1lIjoiU3lzdGVtIFN5c3RlbSIsImNzcmZUb2tlbiI6bnVsbCwiZXhwaXJ5RFRpbWUiOiIyMDIxLTA4LTA0VDA3OjU2OjMzIiwicm9sZXMiOltdLCJ0ZW5hbnRDb2RlIjoiTUIifQ.hZp3BGSm8PMGHXRO7M1mowYDu5hRBdTm_hTzEI8Jds4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"counterparty\": {\r\n\"counterpartyTypeCode\": \"IBAN\",\r\n\"name\": \"Ben Ficher\",\r\n\"value\": \"EE459999000000010140\"\r\n},\r\n\"details\": \"Details\",\r\n\"directionCode\": \"OUT\",\r\n\"effectiveDate\": \"2020-06-08\",\r\n\"endToEndId\": \"NOTPROVIDED\",\r\n\"money\": {\r\n\"amount\": 24.35,\r\n\"currencyCode\": \"EUR\"\r\n},\r\n\"paymentTransferTypeCode\": \"INSTANTREGULAR\",\r\n\"paymentTypeCode\": \"ACC2SEPA\",\r\n\"source\": {\r\n\"sourceName\": \"PAYMENT\",\r\n\"sourceRef\": \"ID-{{$timestamp}}\"\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://account-api.sandbox.modularbank.xyz/api/v1/accounts/ID-2811/payments/ID-2001/confirm",
+					"protocol": "https",
+					"host": [
+						"account-api",
+						"sandbox",
+						"modularbank",
+						"xyz"
+					],
+					"path": [
+						"api",
+						"v1",
+						"accounts",
+						"ID-2811",
+						"payments",
+						"ID-2001",
+						"confirm"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
