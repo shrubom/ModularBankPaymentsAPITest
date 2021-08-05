@@ -198,5 +198,43 @@
 
 ### To run the above test cases, run the ModularBankPaymentsTests.xml as TestNG suite. This will invoke all the POST and GET APIs. 
 
+## Test Output
+
+The test output from TestNG suite.
+
+![](src/main/resources/Images/TestOutput.PNG)
+
+## CI/CD Pipeline Integration
+
+1. Run ModularBankPaymentsTests.xml from maven
+2. Execute testng tests using maven build file pom.xml.
+3. Include the below plugin configuration in your pom.xml.
+
+```
+        <plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.14.1</version>
+				<configuration>
+					<suiteXmlFiles>						<suiteXmlFile>ModularBankPaymentsTests.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+			</plugin>
+		</plugins>
+```
+4. Run your project as **mvn clean install**. You will get the below output
+
+![](src/main/resources/Images/MavenOutput.PNG)
+
+5. 
+
 
 

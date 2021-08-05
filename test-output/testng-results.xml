@@ -2,61 +2,61 @@
 <testng-results skipped="0" failed="0" total="9" passed="9">
   <reporter-output>
   </reporter-output>
-  <suite name="Modular Bank Payments Test Suite" duration-ms="13663" started-at="2021-08-04T22:28:33Z" finished-at="2021-08-04T22:28:47Z">
+  <suite name="Modular Bank Payments Test Suite" duration-ms="18005" started-at="2021-08-05T07:25:29Z" finished-at="2021-08-05T07:25:47Z">
     <groups>
       <group name="paymentsAPI">
-        <method signature="PaymentsGetTestCases.getAccountBalances()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@614df0a4]" name="getAccountBalances" class="com.modularbank.payments.api.invoker.PaymentsGetTestCases"/>
-        <method signature="PaymentsGetTestCases.getAccountDetails()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@614df0a4]" name="getAccountDetails" class="com.modularbank.payments.api.invoker.PaymentsGetTestCases"/>
-        <method signature="PaymentsGetTestCases.getAccountStatement()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@614df0a4]" name="getAccountStatement" class="com.modularbank.payments.api.invoker.PaymentsGetTestCases"/>
-        <method signature="PaymentsPostTestCases.confirmPayment()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="confirmPayment" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
-        <method signature="PaymentsPostTestCases.postCreateAccount()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postCreateAccount" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
-        <method signature="PaymentsPostTestCases.postCreateCustomer()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postCreateCustomer" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
-        <method signature="PaymentsPostTestCases.postJWTRequest()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postJWTRequest" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
-        <method signature="PaymentsPostTestCases.postPayment()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postPayment" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
-        <method signature="PaymentsPostTestCases.postTransactions()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postTransactions" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
+        <method signature="PaymentsGetTestCases.getAccountBalances()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@49d3c823]" name="getAccountBalances" class="com.modularbank.payments.api.invoker.PaymentsGetTestCases"/>
+        <method signature="PaymentsGetTestCases.getAccountDetails()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@49d3c823]" name="getAccountDetails" class="com.modularbank.payments.api.invoker.PaymentsGetTestCases"/>
+        <method signature="PaymentsGetTestCases.getAccountStatement()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@49d3c823]" name="getAccountStatement" class="com.modularbank.payments.api.invoker.PaymentsGetTestCases"/>
+        <method signature="PaymentsPostTestCases.confirmPayment()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="confirmPayment" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
+        <method signature="PaymentsPostTestCases.postCreateAccount()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postCreateAccount" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
+        <method signature="PaymentsPostTestCases.postCreateCustomer()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postCreateCustomer" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
+        <method signature="PaymentsPostTestCases.postJWTRequest()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postJWTRequest" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
+        <method signature="PaymentsPostTestCases.postPayment()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postPayment" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
+        <method signature="PaymentsPostTestCases.postTransactions()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postTransactions" class="com.modularbank.payments.api.invoker.PaymentsPostTestCases"/>
       </group> <!-- paymentsAPI -->
     </groups>
-    <test name="paymentsAPI" duration-ms="13663" started-at="2021-08-04T22:28:33Z" finished-at="2021-08-04T22:28:47Z">
-      <class name="com.modularbank.payments.api.invoker.PaymentsGetTestCases">
-        <test-method status="PASS" signature="getAccountDetails()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@614df0a4]" name="getAccountDetails" duration-ms="1043" started-at="2021-08-05T00:28:37Z" finished-at="2021-08-05T00:28:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAccountDetails -->
-        <test-method status="PASS" signature="getAccountBalances()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@614df0a4]" name="getAccountBalances" duration-ms="961" started-at="2021-08-05T00:28:39Z" finished-at="2021-08-05T00:28:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAccountBalances -->
-        <test-method status="PASS" signature="getAccountStatement()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@614df0a4]" name="getAccountStatement" duration-ms="949" started-at="2021-08-05T00:28:42Z" finished-at="2021-08-05T00:28:43Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAccountStatement -->
-      </class> <!-- com.modularbank.payments.api.invoker.PaymentsGetTestCases -->
+    <test name="paymentsAPI" duration-ms="18005" started-at="2021-08-05T07:25:29Z" finished-at="2021-08-05T07:25:47Z">
       <class name="com.modularbank.payments.api.invoker.PaymentsPostTestCases">
-        <test-method status="PASS" signature="postJWTRequest()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postJWTRequest" duration-ms="3411" started-at="2021-08-05T00:28:33Z" finished-at="2021-08-05T00:28:37Z">
+        <test-method status="PASS" signature="postJWTRequest()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postJWTRequest" duration-ms="4027" started-at="2021-08-05T09:25:29Z" finished-at="2021-08-05T09:25:33Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postJWTRequest -->
-        <test-method status="PASS" signature="postCreateCustomer()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postCreateCustomer" duration-ms="1410" started-at="2021-08-05T00:28:38Z" finished-at="2021-08-05T00:28:39Z">
+        <test-method status="PASS" signature="postCreateCustomer()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postCreateCustomer" duration-ms="1745" started-at="2021-08-05T09:25:35Z" finished-at="2021-08-05T09:25:36Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCreateCustomer -->
-        <test-method status="PASS" signature="postCreateAccount()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postCreateAccount" duration-ms="1596" started-at="2021-08-05T00:28:40Z" finished-at="2021-08-05T00:28:42Z">
+        <test-method status="PASS" signature="postCreateAccount()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postCreateAccount" duration-ms="1488" started-at="2021-08-05T09:25:37Z" finished-at="2021-08-05T09:25:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postCreateAccount -->
-        <test-method status="PASS" signature="postTransactions()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postTransactions" duration-ms="1179" started-at="2021-08-05T00:28:43Z" finished-at="2021-08-05T00:28:44Z">
+        <test-method status="PASS" signature="postTransactions()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postTransactions" duration-ms="1665" started-at="2021-08-05T09:25:40Z" finished-at="2021-08-05T09:25:42Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postTransactions -->
-        <test-method status="PASS" signature="postPayment()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="postPayment" duration-ms="1808" started-at="2021-08-05T00:28:44Z" finished-at="2021-08-05T00:28:46Z">
+        <test-method status="PASS" signature="postPayment()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="postPayment" duration-ms="2459" started-at="2021-08-05T09:25:42Z" finished-at="2021-08-05T09:25:44Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- postPayment -->
-        <test-method status="PASS" signature="confirmPayment()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@57abad67]" name="confirmPayment" duration-ms="1281" started-at="2021-08-05T00:28:46Z" finished-at="2021-08-05T00:28:47Z">
+        <test-method status="PASS" signature="confirmPayment()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsPostTestCases@1cdc4c27]" name="confirmPayment" duration-ms="2782" started-at="2021-08-05T09:25:44Z" finished-at="2021-08-05T09:25:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- confirmPayment -->
       </class> <!-- com.modularbank.payments.api.invoker.PaymentsPostTestCases -->
+      <class name="com.modularbank.payments.api.invoker.PaymentsGetTestCases">
+        <test-method status="PASS" signature="getAccountDetails()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@49d3c823]" name="getAccountDetails" duration-ms="1482" started-at="2021-08-05T09:25:33Z" finished-at="2021-08-05T09:25:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAccountDetails -->
+        <test-method status="PASS" signature="getAccountBalances()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@49d3c823]" name="getAccountBalances" duration-ms="1169" started-at="2021-08-05T09:25:36Z" finished-at="2021-08-05T09:25:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAccountBalances -->
+        <test-method status="PASS" signature="getAccountStatement()[pri:0, instance:com.modularbank.payments.api.invoker.PaymentsGetTestCases@49d3c823]" name="getAccountStatement" duration-ms="1160" started-at="2021-08-05T09:25:39Z" finished-at="2021-08-05T09:25:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAccountStatement -->
+      </class> <!-- com.modularbank.payments.api.invoker.PaymentsGetTestCases -->
     </test> <!-- paymentsAPI -->
   </suite> <!-- Modular Bank Payments Test Suite -->
 </testng-results>
