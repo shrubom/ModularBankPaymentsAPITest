@@ -195,3 +195,8 @@
 			getAccStatements(PaymentsPostTestCases.tokenVal, PaymentsPostTestCases.accountId);
 		}
 ```
+
+### To run the above test cases, run the ModularBankPaymentsTests.xml as TestNG suite. This will invoke all the POST and GET APIs. 
+
+
+
