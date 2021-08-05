@@ -204,7 +204,7 @@ The test output from TestNG suite.
 
 ![](src/main/resources/Images/TestOutput.PNG)
 
-## CI/CD Pipeline Integration
+## CI/CD Pipeline Integration Using Jenkins
 
 1. Run ModularBankPaymentsTests.xml from maven
 2. Execute testng tests using maven build file pom.xml.
@@ -230,11 +230,18 @@ The test output from TestNG suite.
 			</plugin>
 		</plugins>
 ```
-4. Run your project as **mvn clean install**. You will get the below output
+4. Run your project as **mvn clean install** on your IDE(eclipse). You will get the below output
 
 ![](src/main/resources/Images/MavenOutput.PNG)
 
-5. 
+5. Now try to run the project from command prompt. You should see the same result. 
+
+![](src/main/resources/Images/CommandPrmptResult.PNG)
+
+6. Now create a build job in Jenkins 
+
+
+
 
 
 
