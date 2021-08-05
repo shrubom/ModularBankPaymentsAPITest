@@ -238,7 +238,22 @@ The test output from TestNG suite.
 
 ![](src/main/resources/Images/CommandPrmptResult.PNG)
 
-6. Now create a build job in Jenkins 
+6. Now build and run a job in Jenkins
+   *I have used the localhost:8080*
+   
+   > Results from Jenkins
+   
+   ![](src/main/resources/Images/jenkinsDashboard.PNG)
+    ![](src/main/resources/Images/jenkinsBuildJob.PNG)
+     ![](src/main/resources/Images/jenkinsBuild.PNG)
+     
+     
+   
+   
+   
+   
+   
+
 
 
 
