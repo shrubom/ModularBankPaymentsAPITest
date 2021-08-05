@@ -246,8 +246,14 @@ The test output from TestNG suite.
    > Results from Jenkins
    
    ![](src/main/resources/Images/jenkinsDashboard.PNG)
+   
+   
    ![](src/main/resources/Images/jenkinsBuildJob.PNG)
+   
+   
    ![](src/main/resources/Images/jenkinsBuild.PNG)
+   
+   
      
      
    
