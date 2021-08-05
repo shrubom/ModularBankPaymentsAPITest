@@ -248,10 +248,10 @@ The test output from TestNG suite.
    ![](src/main/resources/Images/jenkinsDashboard.PNG)
    
    
-   ![](src/main/resources/Images/jenkinsBuildJob.PNG)
+   ![](src/main/resources/Images/JenkinsBuildJob.PNG)
    
    
-   ![](src/main/resources/Images/jenkinsBuild.PNG)
+   ![](src/main/resources/Images/JenkinsBuild.PNG)
    
    
      
