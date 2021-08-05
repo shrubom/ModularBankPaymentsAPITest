@@ -196,7 +196,9 @@
 		}
 ```
 
-### To run the above test cases, run the ModularBankPaymentsTests.xml as TestNG suite. This will invoke all the POST and GET APIs. 
+### To run the above test cases, run the ModularBankPaymentsTests.xml as TestNG suite. This will invoke all the POST and GET APIs.
+
+*There are POJO classes created for various Request and Response body objects, which will cater for multiple test scenarios*
 
 ## Test Output
 
@@ -244,8 +246,8 @@ The test output from TestNG suite.
    > Results from Jenkins
    
    ![](src/main/resources/Images/jenkinsDashboard.PNG)
-    ![](src/main/resources/Images/jenkinsBuildJob.PNG)
-     ![](src/main/resources/Images/jenkinsBuild.PNG)
+   ![](src/main/resources/Images/jenkinsBuildJob.PNG)
+   ![](src/main/resources/Images/jenkinsBuild.PNG)
      
      
    
